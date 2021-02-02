@@ -1,0 +1,40 @@
+.blog-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.blog-item {
+  flex-direction: column;
+}
+
+.blog-item a {
+  width: 70px;
+  padding: 5px 25px;
+}
+
+.blog-item button {
+  padding: 7px 20px;
+}
+
+.from-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.from-container input {
+  height: 30px;
+}
+
+.from-container textarea{
+  margin-top: 20px;
+  height: 350px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

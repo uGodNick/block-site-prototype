@@ -1,0 +1,21 @@
+
+<div class="blog">
+
+  <h1>Блог</h1>
+
+  <button class="btn add-btn" (click)="isModalHide = false">+ Добавить</button>
+  <div class="blog-list">
+    <app-blog-item
+      *ngFor="let item of blogItems"
+      [item]="item"
+    ></app-blog-item>
+  </div>
+
+  <app-modal
+    [class.hide]="isModalHide"
+    (onHide)="isModalHide = true"
+  ></app-modal>
+
+</div>
+
+

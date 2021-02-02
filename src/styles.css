@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  display: block;
+  color: #000;
+  text-align: center;
+  background-color: #72d2ff;
+  border: 1px solid #008cff;
+  cursor: pointer;
+}
+
+.btn_red {
+  background-color: #ff7f7f;
+  border-color: #ff1c1c;
+}
+
+.hide {
+  display: none;
+}

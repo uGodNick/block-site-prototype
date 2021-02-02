@@ -1,0 +1,8 @@
+<div class="modal">
+  <input placeholder="Заголовок..." [(ngModel)]="title">
+  <textarea placeholder="Содержимое..." [(ngModel)]="content"></textarea>
+  <div>
+    <button class="btn" (click)="hideItem()">Отмена</button>
+    <button class="btn" (click)="addItem()">Сохранить</button>
+  </div>
+</div>
