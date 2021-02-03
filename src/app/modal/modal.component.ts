@@ -8,20 +8,23 @@ import {BlogItem, BlogItemsService} from '../blog-items.service'
 })
 export class ModalComponent {
 
+  // событие закрытия модального окна
   @Output() onHide: EventEmitter<any> = new EventEmitter<any>()
 
   title = ''
   content = ''
 
-  constructor(private blogItemsService: BlogItemsService) {
-  }
+  constructor(private blogItemsService: BlogItemsService) {}
 
   addItem() {
+    // проверка на заполненность полей
     if (this.title.trim() && this.content.trim()){
+
       const blogItem: BlogItem = {
         title: this.title,
         content: this.content
       }
+
       this.blogItemsService.setItem(blogItem)
 
       this.onHide.emit()
@@ -32,4 +35,5 @@ export class ModalComponent {
   hideItem() {
     this.onHide.emit()
   }
+
 }

@@ -38,3 +38,18 @@
   justify-content: space-between;
   margin-top: 10px;
 }
+
+.modal {
+  position: absolute;
+  width: 200px;
+  margin-left: -100px;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.modal p {
+  text-align: center;
+}

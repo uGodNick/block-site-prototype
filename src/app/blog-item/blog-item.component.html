@@ -1,7 +1,7 @@
 <div class="blog-item">
-  <h2>{{item.title}}</h2>
+  <h3>{{item.title}}</h3>
   <div class="item-content">
     {{item.content}}
   </div>
-  <a class="btn" [routerLink]="['blog', item.id]">перейти</a>
+  <a class="btn" [routerLink]="['/blog', item.id]">перейти</a>
 </div>

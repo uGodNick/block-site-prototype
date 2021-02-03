@@ -1,9 +1,8 @@
-
 <div class="blog">
 
   <h1>Блог</h1>
 
-  <button class="btn add-btn" (click)="isModalHide = false">+ Добавить</button>
+  <button class="btn add-btn" (click)="isModalShow = true">Добавить</button>
   <div class="blog-list">
     <app-blog-item
       *ngFor="let item of blogItems"
@@ -12,8 +11,8 @@
   </div>
 
   <app-modal
-    [class.hide]="isModalHide"
-    (onHide)="isModalHide = true"
+    *ngIf="isModalShow"
+    (onHide)="isModalShow = false"
   ></app-modal>
 
 </div>

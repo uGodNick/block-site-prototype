@@ -1,12 +1,26 @@
+<!-- Страница редактирования элемента блока -->
 <div class="blog-item">
-  <a class="btn" href="/">Назад</a>
+
+  <a class="btn" routerLink="/">Назад</a>
+
   <div class="from-container">
-    <p>Запись {{title}}</p>
-    <input [value]="title" placeholder="Заголовок..">
-    <textarea placeholder="Содержимое">{{content}}</textarea>
+    <p>Запись "{{item.title}}"</p>
+    <input [(ngModel)]="changedItem.title" placeholder="Заголовок..">
+    <textarea [(ngModel)]="changedItem.content" placeholder="Содержимое.."></textarea>
   </div>
+
   <div class="btn-container">
-    <button class="btn btn_red">Удалить</button>
-    <button class="btn">Сохранить</button>
+    <button class="btn btn_red" (click)="isModalShow = true">Удалить</button>
+    <button class="btn" (click)="updateItem()">Сохранить</button>
   </div>
+
+  <!-- Модальное окно подтверждения на удаление -->
+  <div *ngIf="isModalShow" class="modal">
+    <p>Вы действительно хотите удалить эту запись?</p>
+    <div class="btn-container">
+      <button class="btn" (click)="delItem()">Да</button>
+      <button class="btn" (click)="isModalShow = false">Нет</button>
+    </div>
+  </div>
+
 </div>

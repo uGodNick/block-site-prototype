@@ -5,6 +5,10 @@ import {BlogListPageComponent} from "./blog-list-page/blog-list-page.component";
 
 const routes: Routes = [
   {
+    path: '',
+    component: BlogListPageComponent
+  },
+  {
     path: 'blog/:id',
     component: BlogItemPageComponent
   },

@@ -8,7 +8,7 @@ import {BlogItemsService} from "../blog-items.service";
 })
 export class BlogListPageComponent {
 
-  isModalHide = true
+  isModalShow = false
 
   constructor(private blogItemsService: BlogItemsService) {}
 

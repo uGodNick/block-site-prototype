@@ -25,12 +25,23 @@ export class BlogItemsService {
   }
 
   getItemById(id: number) {
-    return this.blogItems.find(item => item.id === id)
+    return <BlogItem>this.blogItems.find((item) => item.id === id)
   }
 
   setItem(blogItem: BlogItem) {
+    // при отсутствии элементов устанавливать id = 1, иначе - на один больше предыдущего
     this.blogItems[0].id ? blogItem.id = this.blogItems[0].id + 1: blogItem.id = 1
     this.blogItems.unshift(blogItem)
   }
 
+  delItemById(id: number) {
+    const index = this.blogItems.findIndex(item => item.id === id)
+    this.blogItems.splice(index, 1)
+  }
+
+  updateItem(blogItem: BlogItem) {
+    const index = this.blogItems.findIndex(item => item.id === blogItem.id)
+    this.blogItems[index].title = blogItem.title
+    this.blogItems[index].content = blogItem.content
+  }
 }
